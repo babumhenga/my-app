@@ -9,33 +9,73 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <style>
-  .my-navbar{
-    height:60px;
-  }
-  .my-navbar ul{
-    display: flex;
-    float: right;
+  *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
     
   }
-  li{
-    padding: 0px;
-    margin-left: 5px;
-    color:rgb(116, 105, 105);
-    list-style-type: none;
-    border-radius: 2px;
+  nav{
+    background: #0082e6;
+    height:100%;
+    width: 100%;
   }
-  li :hover{
-    color:rgb(0, 0, 0);
-    cursor: pointer;
-     
+  label.ditail{
+    color:white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
   }
-  
+  nav ul{
+    float:right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display:inline-block;
+    line-height: 80px;
+    margin: 30px;
+    color: white;
+    text-transform: uppercase;
+  }
+  nav ul li a{
+    color: white;
+  }
+  .list li{
+    margin-top:10px ;
+    text-decoration: none;
+    
+  }
+  .list li :hover{
+    border: 0px;
+    background-color: #0e7ed4;
+  }
   .body{
     background-image: url(/my-app/src/images/second-slider.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    
+    /* filter: brightness(20%); */
     height: 500px;
+    
+  }
+  .body header{
+    color: rgb(61, 52, 185);
+    display: flex;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  .body section button{
+    background-color:transparent;
+    color: #003e6d;
+    border:1px solid #0082e6 ;
+    border-radius: 2px;
+    height:70px;
+    width: 200px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 2px;
+    transition: 0.8s;
   }
   h1{
     justify-content: center;
@@ -46,14 +86,11 @@
     text-align: center;
     
   }
-  .buttons button{
-    background-color: rgb(214, 143, 85);
-    border: none;
-    height:50px;
-    
-  }
+  
   .buttons :hover{
-    background-color: rgb(255, 81, 0);
+    background-color: rgb(0, 174, 255);
+    transition-delay: 2ms;
+    border-radius: 50%  0 50% 0;
   }
   footer{
     display: flex;
@@ -64,41 +101,76 @@
 <body>
   <app-root>
     <nav class="my-navbar">
-      <ul>
+      <label class="ditail">Vaccines</label>
+      <!-- <input type="search" placeholder="patient's name">
+      <button>
+        search
+        <span class="material-symbols-outlined">
+          search
+        </span>
+      </button> -->
+      <ul class="list">
         <li>
           <span class="material-symbols-outlined">
             home
           </span>
-          Home
+          <a href="index.html">Home</a>
         </li>
         <li>
           <span class="material-symbols-outlined">
-            info
+            coffee
           </span>
-          Info
+          <a href="about.html">About</a>
         </li>
         <li>
           <span class="material-symbols-outlined">
-            local_cafe
+            feedback
           </span>
-          About
+          <a href="">Services</a>
         </li>
         <li>
           <span class="material-symbols-outlined">
-            phone_in_talk
-            </span>
-          Contacts
+            feedback
+          </span>
+          <a href="">Feedback</a>
+        </li>
+        <li>
+          <span class="material-symbols-outlined">
+            call
+          </span>
+          <a href="">Contacts</a>
         </li>
       </ul>
     </nav>
-    <br>
+    
     <div class="body">
       <header>
-        <h1>VACCINATION CLINIC</h1>
+        <h1>
+          We Belive Everyone Should Have Access To Proper  
+          Vaccination And Proper Medical Attention
+          
+        </h1>
       </header>
+      
+      <!-- <p>
+        Lorem ipsum dolor sit, amet consectetur <br>
+         adipisicing elit. Sint nisi ducimus debitis <br>
+         ipsum at porro tenetur, quo id dignissimos <br>
+         tempore pariatur sequi maiores facilis <br>
+          unde animi suscipit eius est nulla.
+      </p> -->
+      <br>
+      <br>
+      <br>
+      <br>
       <section class="buttons">
         <button>Information</button>
-        <button>Vaccination</button>
+        <button>
+          Book A Vaccine
+          <span class="material-symbols-outlined">
+            arrow_forward
+          </span>
+        </button>
       </section>
     </div>
     <footer>
