@@ -74,7 +74,7 @@
     border:1px solid #0082e6 ;
     border-radius: 2px;
     height:70px;
-    width: 200px;
+    width: 20%;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 2px;
@@ -92,7 +92,7 @@
   .buttons :hover{
     background-color: rgb(0, 174, 255);
     transition-delay: 2ms;
-    border-radius: 50%  0 50% 0;
+    border-radius: 10%  10% 10% 10%;
   }
   
   .footer{
@@ -170,7 +170,38 @@
   @media(max-width:767px){
 
   }
- 
+ .forms{
+  filter: rgb(187, 187, 255);
+  background-image: url(/my-app/src/images/johnsalvino.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+ }
+ .register{
+  border: 0.5px solid blue;
+  border-radius: 10px;
+  height: 500px;
+  width: 70%;
+  margin-left: 15%;
+  
+  display: grid;
+  backdrop-filter: blur(5px);
+ }
+ .register input{
+  width:50%;
+  margin-left: 40%;
+  
+ }
+ .register h3{
+  margin-left: 40%;
+ }
+ .register button{
+  width: 30%;
+  margin-left:40% ;
+ }
+ .register label{
+  color: white;
+ }
 </style>
 <body>
   
@@ -249,11 +280,45 @@
         </span>
       </button>
     </section>
+    
   </div>
+  
+  <div class="forms">
+    
+    <div class="register">
+      <h3>Patient's details</h3>
+      <label for="">first name</label>
+      <input type="text">
+      <br>
+      <label for="">middle name</label>
+      <input type="text">
+      <br>
+      <label for="">last name</label>
+      <input type="text">
+      <br>
+      <label for="">sex</label>
+      <input type="text">
+      <br>
+      <label for="">date of birth (mm/dd/yy)</label>
+      <input type="date">
+      <br>
+      <label for="">add your email</label>
+      <input type="email">
+      <br>
+      <label for="">next of kin</label>
+      <input type="text">
+      <br>
+      
+      <button id="save" onclick = "saving()">save details</button>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
 
-  <section class="forms">
-    <img src="/my-app/src/images/receptionist.jpg" alt="">
-  </section>
+    </div>
+  </div>
+  
   <footer class="footer">
     <div class="container">
       <div class="row">
